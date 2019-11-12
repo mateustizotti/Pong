@@ -3,6 +3,7 @@ let pong1, pong2;
 let font;
 let score1 = 0;
 let score2 = 0;
+var socket;
 
 function preload () {
   font = loadFont("/assets/prstart.ttf");
@@ -11,6 +12,7 @@ function preload () {
 
 function setup() {
   createCanvas(600, 500);
+  socket = io.connect('http://localhost:3000');
   puck = new Puck();
   pong1 = new Pong(- width / 2 + 20);
   pong2 = new Pong(width / 2 - 20);
