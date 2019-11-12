@@ -1,0 +1,28 @@
+{
+  "name": "pong",
+  "version": "1.0.0",
+  "description": "Pong Game",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mateustizotti/Pong.git"
+  },
+  "keywords": [
+    "Pong",
+    "Game",
+    "p5.js"
+  ],
+  "author": "Mateus Tizotti",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mateustizotti/Pong/issues"
+  },
+  "homepage": "https://github.com/mateustizotti/Pong#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
