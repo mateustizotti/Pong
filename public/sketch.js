@@ -3,20 +3,19 @@ let pong1, pong2;
 let font;
 let score1 = 0;
 let score2 = 0;
-var socket;
 
-function preload () {
+
+function preload() {
   font = loadFont("/assets/prstart.ttf");
-
 }
 
 function setup() {
   createCanvas(600, 500);
-  socket = io.connect('http://localhost:3000');
-  puck = new Puck();
-  pong1 = new Pong(- width / 2 + 20);
+  pong1 = new Pong(-width / 2 + 20);
   pong2 = new Pong(width / 2 - 20);
+  puck = new Puck();
 }
+
 
 function draw() {
   background(0);
@@ -27,7 +26,7 @@ function draw() {
   text(score1, -30, -height / 2 + 30);
   text(score2, 30, -height / 2 + 30);
 
-  for (let i = -height/2; i <= height / 2; i++) {
+  for (let i = -height / 2; i <= height / 2; i++) {
     fill(255);
     stroke(255);
     strokeWeight(5);
@@ -45,6 +44,7 @@ function draw() {
   pong1.update();
   pong2.show();
   pong2.update();
+
 }
 
 function keyReleased() {
@@ -57,6 +57,7 @@ function keyReleased() {
   }
 
 }
+
 function keyPressed() {
   if (keyCode === UP_ARROW) {
     pong2.setDir(-5);

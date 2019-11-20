@@ -55,6 +55,7 @@ function Puck() {
             score1++;
             this.reset();
         }
+        
     }
 
 
